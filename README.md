@@ -34,7 +34,7 @@ proyecto_reproducible/
 
 ```bash
 # 1. Clona el repositorio
-git clone <URL-del-repositorio>
+git clone https://github.com/usuario/proy_data_science
 cd proyecto_reproducible
 
 # 2. (Opcional) Crea un entorno virtual
@@ -89,14 +89,41 @@ El archivo fuente se encuentra en `data/resumen_ventas_preparado.csv`.
 
 ## Control de versiones
 
-El repositorio usa **Git**. Convención de mensajes de commit:
+El repositorio usa **Git** con commits frecuentes y atómicos: cada commit refleja un único avance concreto (una función nueva, un gráfico, una corrección).
+
+### Convención de mensajes
 
 ```
-feat: <descripción breve de la nueva funcionalidad>
-fix:  <descripción del error corregido>
-docs: <cambios en documentación>
-data: <actualización del dataset>
+<tipo>: <descripción breve en imperativo>
 ```
+
+| Tipo | Cuándo usarlo |
+|------|---------------|
+| `feat` | Nueva funcionalidad o análisis |
+| `fix` | Corrección de error o resultado incorrecto |
+| `docs` | Cambios en README u otra documentación |
+| `data` | Actualización o corrección del dataset |
+| `refactor` | Mejora interna sin cambio de comportamiento |
+| `style` | Formato, limpieza de celdas, sin lógica nueva |
+| `chore` | Tareas de mantenimiento (deps, `.gitignore`, etc.) |
+
+### Ejemplos aplicados a este proyecto
+
+```bash
+git commit -m "data: agregar resumen_ventas_preparado.csv como fuente principal"
+git commit -m "feat: implementar cargar_csv y limpiar_dataframe en utils.py"
+git commit -m "feat: añadir análisis de ventas por categoría con agrupación"
+git commit -m "feat: generar gráfico de barras por categoría y guardar en outputs/"
+git commit -m "fix: corregir conversión de tipos en columna Precio_Medio"
+git commit -m "docs: completar README con estructura, instalación y uso"
+git commit -m "chore: eliminar dependencias no utilizadas de requirements.txt"
+```
+
+### Frecuencia recomendada
+
+- Haz commit al terminar **cada función** en `utils.py`.
+- Haz commit al completar **cada sección del notebook** (carga, limpieza, análisis, visualización).
+- No acumules varios cambios sin relacionar en un solo commit.
 
 ---
 
