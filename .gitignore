@@ -1,0 +1,49 @@
+# ── Entornos virtuales ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Jupyter ─────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ── Secretos y configuración local ──────────────────────────────────────────
+.env
+.env.*
+!.env.example
+secrets.json
+
+# ── Outputs generados ───────────────────────────────────────────────────────
+outputs/*.png
+outputs/*.pdf
+outputs/*.html
+
+# ── Datos sensibles o pesados ───────────────────────────────────────────────
+data/*.db
+data/*.sqlite
+*.csv.bak
+
+# ── IDEs y editores ──────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
